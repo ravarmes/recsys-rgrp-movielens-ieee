@@ -197,11 +197,8 @@ class RecSys():
         if(algorithm == 'RecSysALS'):
             
             # factorization parameters
-            # rank = 20 # before 20
-            # lambda_ = 20 # before 20 - ridge regularizer parameter
-
-            rank = 8
-            lambda_ = 10
+            rank = 20 # before 20
+            lambda_ = 20 # before 20 - ridge regularizer parameter
 
             # initiate a recommender system of type ALS (Alternating Least Squares)
             RS = RecSysALS.als_RecSysALS(rank,lambda_)
@@ -221,6 +218,7 @@ class RecSys():
             RS = RecSysNCF.RecSysNCF(n_users=1000, n_items=1000, n_factors=20, ratings=X)
             X_est, error = RS.fit_model()
         elif(algorithm == 'RecSysNCF2'):
+            # RS = RecSysNCF2.RecSysNCF2(n_users=1000, n_items=1000, n_factors=128, ratings=X)
             RS = RecSysNCF2.RecSysNCF2(n_users=1000, n_items=1000, n_factors=128, ratings=X)
             X_est, error = RS.fit_model()
         elif algorithm == 'RecSysKNN2':
