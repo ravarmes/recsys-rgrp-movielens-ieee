@@ -225,5 +225,12 @@ RgrpGender (feminine) : 0.7051484
 0         1  0.777427  0.453349            0.352446
 1         2  0.848047  0.476426            0.404032
 
-
+------------------------------------------
+Algorithm: RecSysNCF2
+Group (Rgrp Gender): 0.0012830
+RgrpGender (masculine): 0.6277816
+RgrpGender (feminine) : 0.6994194
+   group_id   novelty       ILD  adjusted_diversity
+0         1  0.802987  0.462718            0.371557
+1         2  0.876619  0.487007            0.426920
 
