@@ -23,7 +23,8 @@ omega = ~ratings_df.isnull() # matrix X with True in cells with evaluations and 
 n_factors_list = [10, 20, 50, 100]
 epochs_list = [10, 20, 30]
 batch_size_list = [16, 32, 64]
-learning_rate_list = [0.001, 0.01, 0.05]
+learning_rate_list = [0.01]
+# learning_rate_list = [0.001, 0.01, 0.05]
 
 best_error = float('inf')
 best_params = None
