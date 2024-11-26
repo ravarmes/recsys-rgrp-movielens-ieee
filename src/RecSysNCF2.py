@@ -19,7 +19,7 @@ class RecSysNCF2:
     def set_ratings(self, ratings):
         self.ratings = ratings
 
-    def fit_model(self, epochs=5, batch_size=32):
+    def fit_model(self, epochs=10, batch_size=124):
         # Preparação dos dados: assume que self.ratings já está na forma de matriz usuários x itens
         ratings_matrix = self.ratings.to_numpy()
         known_ratings_mask = ~np.isnan(ratings_matrix)
@@ -38,14 +38,14 @@ class RecSysNCF2:
         user_vec = Flatten()(user_embedding)
         item_vec = Flatten()(item_embedding)
         concat = Concatenate()([user_vec, item_vec])
-        # dense = Dense(128, activation='relu')(concat)
-        # predictions = Dense(1)(dense)
-        dense_1 = Dense(128, activation='relu')(concat)
-        dense_2 = Dense(64, activation='relu')(dense_1)
-        predictions = Dense(1)(dense_2)
+        dense = Dense(128, activation='relu')(concat)
+        predictions = Dense(1)(dense)
+        # dense_1 = Dense(128, activation='relu')(concat)
+        # dense_2 = Dense(64, activation='relu')(dense_1)
+        # predictions = Dense(1)(dense_2)
         model = Model(inputs=[user_input, item_input], outputs=predictions)
-        model.compile(optimizer=Adam(learning_rate=0.01), loss='mean_squared_error')
-        # model.compile(optimizer=Adam(), loss='mean_squared_error')
+        # model.compile(optimizer=Adam(learning_rate=0.01), loss='mean_squared_error')
+        model.compile(optimizer=Adam(), loss='mean_squared_error')
 
         # Treinamento do modelo
         model.fit([user_ids_train, item_ids_train], ratings_train, epochs=epochs, batch_size=batch_size, validation_data=([user_ids_test, item_ids_test], ratings_test))

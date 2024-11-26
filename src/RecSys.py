@@ -219,7 +219,7 @@ class RecSys():
             X_est, error = RS.fit_model()
         elif(algorithm == 'RecSysNCF2'):
             # RS = RecSysNCF2.RecSysNCF2(n_users=1000, n_items=1000, n_factors=128, ratings=X)
-            RS = RecSysNCF2.RecSysNCF2(n_users=1000, n_items=1000, n_factors=128, ratings=X)
+            RS = RecSysNCF2.RecSysNCF2(n_users=1000, n_items=1000, n_factors=40, ratings=X)
             X_est, error = RS.fit_model()
         elif algorithm == 'RecSysKNN2':
             RS = RecSysKNN2.RecSysKNN2(k=50, ratings=X, user_based=True)

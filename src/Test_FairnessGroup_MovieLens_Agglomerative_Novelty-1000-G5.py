@@ -22,7 +22,7 @@ top_items = True # True: to use movies with more ratings; False: otherwise
 # recommendation algorithm
 # algorithms = ['RecSysALS', 'RecSysKNN', 'RecSysNCF']
 # algorithms = ['RecSysALS', 'RecSysKNN2']
-algorithms = ['RecSysNCF2']
+algorithms = ['RecSysNCF2', 'RecSysNCF2', 'RecSysNCF2', 'RecSysNCF2', 'RecSysNCF2']
 
 resultados = []
 

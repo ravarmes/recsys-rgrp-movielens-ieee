@@ -15,11 +15,13 @@ top_users = True # True: to use users with more ratings; False: otherwise
 top_items = True # True: to use movies with more ratings; False: otherwise
 
 # recommendation algorithm
-# algorithms = ['RecSysALS', 'RecSysKNN2', 'RecSysNCF']
+# algorithms = ['RecSysALS', 'RecSysKNN2', 'RecSysNCF2']
 # algorithms = ['RecSysKNN2']
 # algorithms = ['RecSysSVD']
-algorithms = ['RecSysNCF2']
+# algorithms = ['RecSysNCF2']
 # algorithms = ['RecSysALS']
+algorithms = ['RecSysNCF2', 'RecSysNCF2', 'RecSysNCF2']
+
 
 for algorithm in algorithms:
 
