@@ -14,7 +14,7 @@ class RecSysNMF:
     def set_ratings(self, ratings):
         self.ratings = ratings
 
-    def fit_model(self, max_iter=500, tol=1e-5):
+    def fit_model(self, max_iter=1000, tol=1e-5):
         # Inicializa o modelo NMF
         model = NMF(n_components=self.n_components, max_iter=max_iter, tol=tol, init='random')
         
