@@ -7,6 +7,8 @@ import RecSysNCF2
 # import RecSysSVD
 import RecSysKNN2
 import RecSysKNN3
+import RecSysKNN4
+import RecSysKNN5
 import RecSysRBM
 
 class RecSys():
@@ -219,13 +221,19 @@ class RecSys():
             X_est, error = RS.fit_model()
         elif(algorithm == 'RecSysNCF2'):
             # RS = RecSysNCF2.RecSysNCF2(n_users=1000, n_items=1000, n_factors=128, ratings=X)
-            RS = RecSysNCF2.RecSysNCF2(n_users=1000, n_items=1000, n_factors=40, ratings=X)
+            RS = RecSysNCF2.RecSysNCF2(n_users=1000, n_items=1000, n_factors=50, ratings=X)
             X_est, error = RS.fit_model()
         elif algorithm == 'RecSysKNN2':
             RS = RecSysKNN2.RecSysKNN2(k=50, ratings=X, user_based=True)
             X_est = RS.fit_model()
         elif algorithm == 'RecSysKNN3':
             RS = RecSysKNN3.RecSysKNN3(k=5, ratings=X, user_based=True)
+            X_est = RS.fit_model()
+        elif algorithm == 'RecSysKNN4':
+            RS = RecSysKNN4.RecSysKNN4(k=28, ratings=X, user_based=True)
+            X_est = RS.fit_model()
+        elif algorithm == 'RecSysKNN5':
+            RS = RecSysKNN5.RecSysKNN5(k=100, ratings=X, user_based=True)
             X_est = RS.fit_model()
         elif algorithm == 'RecSysRBM':
             RS = RecSysRBM.RecSysRBM(ratings=X, n_components=5, learning_rate=0.01, n_iter=200)

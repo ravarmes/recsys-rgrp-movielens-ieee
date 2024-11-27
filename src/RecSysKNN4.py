@@ -4,11 +4,11 @@ from sklearn.metrics.pairwise import cosine_similarity
 from sklearn.impute import SimpleImputer
 from abc import ABCMeta, abstractmethod
 
-class RecSysKNN2:
+class RecSysKNN4:
     __metaclass__ = ABCMeta
     
-    # def __init__(self, k, ratings=None, user_based=True, min_similarity=0.1, normalize=True, hybrid_factor=0.5):
-    def __init__(self, k, ratings=None, user_based=True, min_similarity=0.01, normalize=True, hybrid_factor=0.5):
+    def __init__(self, k, ratings=None, user_based=True, min_similarity=0.1, normalize=True, hybrid_factor=0.5):
+    # def __init__(self, k, ratings=None, user_based=True, min_similarity=0.02, normalize=True, hybrid_factor=0.5):
         """
         Parâmetros:
         - k: Número de vizinhos mais próximos.

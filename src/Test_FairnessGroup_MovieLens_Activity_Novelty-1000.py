@@ -20,7 +20,8 @@ top_items = True # True: to use movies with more ratings; False: otherwise
 # algorithms = ['RecSysSVD']
 # algorithms = ['RecSysNCF2']
 # algorithms = ['RecSysALS']
-algorithms = ['RecSysNCF2', 'RecSysNCF2', 'RecSysNCF2']
+# algorithms = ['RecSysNCF2', 'RecSysNCF2', 'RecSysNCF2']
+algorithms = ['RecSysKNN5']
 
 
 for algorithm in algorithms:
@@ -37,11 +38,11 @@ for algorithm in algorithms:
 
     X_est = recsys.compute_X_est(X, algorithm) # RecSysALS or RecSysKNN or RecSysNMF
 
-    # # Salve o DataFrame em um arquivo Excel
-    # import os
-    # file_path_X = f'X_{algorithm}.xlsx'  # Definindo o caminho e nome do arquivo
-    # if not os.path.exists(file_path_X):
-    #     X.to_excel(file_path_X, index=True)
+    # Salve o DataFrame em um arquivo Excel
+    import os
+    file_path_X = f'X_{algorithm}.xlsx'  # Definindo o caminho e nome do arquivo
+    if not os.path.exists(file_path_X):
+        X.to_excel(file_path_X, index=True)
 
     # file_path_X_est = f'X_est_{algorithm}.xlsx'  # Definindo o caminho e nome do arquivo
     # X_est.to_excel(file_path_X_est, index=True)  # Altere index=False se não quiser incluir o índice

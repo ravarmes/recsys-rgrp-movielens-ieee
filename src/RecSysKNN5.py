@@ -2,13 +2,12 @@ import pandas as pd
 import numpy as np
 from sklearn.metrics.pairwise import cosine_similarity
 from sklearn.impute import SimpleImputer
-from abc import ABCMeta, abstractmethod
+from abc import ABCMeta
 
-class RecSysKNN2:
+class RecSysKNN5:
     __metaclass__ = ABCMeta
     
-    # def __init__(self, k, ratings=None, user_based=True, min_similarity=0.1, normalize=True, hybrid_factor=0.5):
-    def __init__(self, k, ratings=None, user_based=True, min_similarity=0.01, normalize=True, hybrid_factor=0.5):
+    def __init__(self, k, ratings=None, user_based=True, min_similarity=0.01, normalize=True, pearson_weight=0.8):
         """
         Parâmetros:
         - k: Número de vizinhos mais próximos.
@@ -16,13 +15,13 @@ class RecSysKNN2:
         - user_based: True para filtragem baseada em usuários, False para itens.
         - min_similarity: Limite mínimo para similaridade.
         - normalize: Normalizar as classificações para média zero.
-        - hybrid_factor: Peso para combinar similaridade de usuários e itens (0 a 1).
+        - pearson_weight: Peso para combinar entre similaridade de cosseno e Pearson.
         """
         self.k = k
         self.user_based = user_based
         self.min_similarity = min_similarity
         self.normalize = normalize
-        self.hybrid_factor = hybrid_factor
+        self.pearson_weight = pearson_weight
         if ratings is not None:
             self.set_ratings(ratings)
     
@@ -39,16 +38,27 @@ class RecSysKNN2:
             mean_ratings = ratings.mean(axis=0)
             return ratings.sub(mean_ratings, axis=1).fillna(0), mean_ratings
     
+    def get_cosine_similarity(self, ratings):
+        return pd.DataFrame(cosine_similarity(ratings.fillna(0)), index=ratings.index, columns=ratings.index)
+
+    def get_pearson_similarity(self, ratings):
+        if self.user_based:
+            return ratings.T.corr().fillna(0)
+        else:
+            return ratings.corr().fillna(0)
+    
     def get_similarity_matrix(self):
         ratings = self.ratings.copy()
+        
         if self.normalize:
             ratings, _ = self.normalize_ratings(ratings)
         
-        if self.user_based:
-            similarity = pd.DataFrame(cosine_similarity(ratings.fillna(0)), index=ratings.index, columns=ratings.index)
-        else:
-            similarity = pd.DataFrame(cosine_similarity(ratings.fillna(0).T), index=ratings.columns, columns=ratings.columns)
-        return similarity
+        cosine_sim = self.get_cosine_similarity(ratings)
+        pearson_sim = self.get_pearson_similarity(ratings)
+        
+        # Hibridização das similaridades
+        similarity = self.pearson_weight * pearson_sim + (1 - self.pearson_weight) * cosine_sim
+        return similarity.where(similarity.notnull(), 0)  # Certifica-se de que não há NaNs
     
     def knn_filtering(self, similarity):
         for i in similarity.index:
