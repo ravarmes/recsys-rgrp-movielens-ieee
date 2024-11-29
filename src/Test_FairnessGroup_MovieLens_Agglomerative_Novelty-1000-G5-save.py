@@ -120,5 +120,5 @@ with open(output_file, 'w') as f:
             resultados.append(f'{RgrpAgglomerative:.7f}')
 
 print(resultados)  # Exibe todos os resultados
-menor = min(resultados)
-print(menor) # Exibe o menor dos resultados
+maior = max(resultados)
+print(maior) # Exibe o menor dos resultados

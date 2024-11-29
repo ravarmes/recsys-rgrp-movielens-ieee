@@ -21,8 +21,8 @@ top_items = True # True: to use movies with more ratings; False: otherwise
 # algorithms = ['RecSysNCF2']
 # algorithms = ['RecSysALS']
 # algorithms = ['RecSysNCF2', 'RecSysNCF2', 'RecSysNCF2']
-# algorithms = ['RecSysContentBased']
-algorithms = ['RecSysContentBased4']
+algorithms = ['RecSysContentBased5']
+# algorithms = ['RecSysALS']
 
 
 for algorithm in algorithms:
