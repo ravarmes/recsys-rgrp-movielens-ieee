@@ -1,0 +1,440 @@
+Grupo 1: 209 elementos
+Grupo 2: 68 elementos
+Grupo 3: 209 elementos
+Grupo 4: 336 elementos
+Grupo 5: 178 elementos
+
+
+------------------------------------------
+Algorithm: RecSysContentBased4
+Group (Rgrp Agglomerative): 0.0019243
+RgrpAgglomerative (1): 0.6488807
+RgrpAgglomerative (2): 0.6687825
+RgrpAgglomerative (3): 0.5437112
+RgrpAgglomerative (4): 0.6287658
+RgrpAgglomerative (5): 0.6484317
+   group_id   novelty       ILD  adjusted_diversity
+0         1  0.997171  0.565491            0.563891
+1         2  0.951687  0.549485            0.522939
+2         3  0.975595  0.554849            0.541308
+3         4  0.974113  0.555988            0.541595
+4         5  0.963538  0.556433            0.536145
+RMSE: 0.7915771
+Grupo 1: 209 elementos
+Grupo 2: 68 elementos
+Grupo 3: 209 elementos
+Grupo 4: 336 elementos
+Grupo 5: 178 elementos
+
+
+------------------------------------------
+Algorithm: RecSysContentBased4
+Group (Rgrp Agglomerative): 0.0019643
+RgrpAgglomerative (1): 0.6508488
+RgrpAgglomerative (2): 0.6688709
+RgrpAgglomerative (3): 0.5446570
+RgrpAgglomerative (4): 0.6362345
+RgrpAgglomerative (5): 0.6536062
+   group_id   novelty       ILD  adjusted_diversity
+0         1  1.023062  0.574530            0.587781
+1         2  0.965191  0.554202            0.534912
+2         3  1.002086  0.562794            0.563969
+3         4  1.012100  0.568330            0.575207
+4         5  0.982058  0.562218            0.552131
+RMSE: 0.7939735
+Grupo 1: 209 elementos
+Grupo 2: 68 elementos
+Grupo 3: 209 elementos
+Grupo 4: 336 elementos
+Grupo 5: 178 elementos
+
+
+------------------------------------------
+Algorithm: RecSysContentBased4
+Group (Rgrp Agglomerative): 0.0018716
+RgrpAgglomerative (1): 0.6479840
+RgrpAgglomerative (2): 0.6691276
+RgrpAgglomerative (3): 0.5461113
+RgrpAgglomerative (4): 0.6314976
+RgrpAgglomerative (5): 0.6516038
+   group_id   novelty       ILD  adjusted_diversity
+0         1  1.027346  0.579074            0.594910
+1         2  0.965200  0.557187            0.537798
+2         3  1.011765  0.569425            0.576125
+3         4  1.007831  0.571380            0.575855
+4         5  0.979484  0.564827            0.553240
+RMSE: 0.7926888
+Grupo 1: 209 elementos
+Grupo 2: 68 elementos
+Grupo 3: 209 elementos
+Grupo 4: 336 elementos
+Grupo 5: 178 elementos
+
+
+------------------------------------------
+Algorithm: RecSysContentBased4
+Group (Rgrp Agglomerative): 0.0018851
+RgrpAgglomerative (1): 0.6518607
+RgrpAgglomerative (2): 0.6682204
+RgrpAgglomerative (3): 0.5472944
+RgrpAgglomerative (4): 0.6385805
+RgrpAgglomerative (5): 0.6543804
+   group_id   novelty       ILD  adjusted_diversity
+0         1  1.030750  0.577002            0.594746
+1         2  0.979701  0.559136            0.547787
+2         3  1.009608  0.566061            0.571500
+3         4  1.012236  0.568197            0.575150
+4         5  0.988483  0.565260            0.558751
+RMSE: 0.7948692
+Grupo 1: 209 elementos
+Grupo 2: 68 elementos
+Grupo 3: 209 elementos
+Grupo 4: 336 elementos
+Grupo 5: 178 elementos
+
+
+------------------------------------------
+Algorithm: RecSysContentBased4
+Group (Rgrp Agglomerative): 0.0018334
+RgrpAgglomerative (1): 0.6502018
+RgrpAgglomerative (2): 0.6654780
+RgrpAgglomerative (3): 0.5454038
+RgrpAgglomerative (4): 0.6318181
+RgrpAgglomerative (5): 0.6488187
+   group_id   novelty       ILD  adjusted_diversity
+0         1  1.034983  0.579956            0.600245
+1         2  0.982137  0.562162            0.552121
+2         3  1.016570  0.569519            0.578957
+3         4  1.020384  0.573297            0.584983
+4         5  0.997885  0.569607            0.568402
+RMSE: 0.7922815
+Grupo 1: 209 elementos
+Grupo 2: 68 elementos
+Grupo 3: 209 elementos
+Grupo 4: 336 elementos
+Grupo 5: 178 elementos
+
+
+------------------------------------------
+Algorithm: RecSysContentBased4
+Group (Rgrp Agglomerative): 0.0019879
+RgrpAgglomerative (1): 0.6595552
+RgrpAgglomerative (2): 0.6790457
+RgrpAgglomerative (3): 0.5533873
+RgrpAgglomerative (4): 0.6438991
+RgrpAgglomerative (5): 0.6627171
+   group_id   novelty       ILD  adjusted_diversity
+0         1  1.001874  0.569312            0.570380
+1         2  0.961717  0.555145            0.533893
+2         3  0.997191  0.562853            0.561273
+3         4  0.985711  0.561272            0.553252
+4         5  0.970778  0.560672            0.544288
+RMSE: 0.7994263
+Grupo 1: 209 elementos
+Grupo 2: 68 elementos
+Grupo 3: 209 elementos
+Grupo 4: 336 elementos
+Grupo 5: 178 elementos
+
+
+------------------------------------------
+Algorithm: RecSysContentBased4
+Group (Rgrp Agglomerative): 0.0019456
+RgrpAgglomerative (1): 0.6520912
+RgrpAgglomerative (2): 0.6711375
+RgrpAgglomerative (3): 0.5471691
+RgrpAgglomerative (4): 0.6354483
+RgrpAgglomerative (5): 0.6561922
+   group_id   novelty       ILD  adjusted_diversity
+0         1  0.997415  0.564022            0.562564
+1         2  0.949768  0.547733            0.520220
+2         3  0.979575  0.554036            0.542721
+3         4  0.982050  0.557314            0.547311
+4         5  0.962032  0.555131            0.534054
+RMSE: 0.7948217
+Grupo 1: 209 elementos
+Grupo 2: 68 elementos
+Grupo 3: 209 elementos
+Grupo 4: 336 elementos
+Grupo 5: 178 elementos
+
+
+------------------------------------------
+Algorithm: RecSysContentBased4
+Group (Rgrp Agglomerative): 0.0019109
+RgrpAgglomerative (1): 0.6564320
+RgrpAgglomerative (2): 0.6735343
+RgrpAgglomerative (3): 0.5500984
+RgrpAgglomerative (4): 0.6387261
+RgrpAgglomerative (5): 0.6547134
+   group_id   novelty       ILD  adjusted_diversity
+0         1  1.035392  0.580098            0.600629
+1         2  0.983578  0.561017            0.551805
+2         3  1.020359  0.569468            0.581062
+3         4  1.018312  0.572583            0.583069
+4         5  0.997810  0.569712            0.568465
+RMSE: 0.7962269
+Grupo 1: 209 elementos
+Grupo 2: 68 elementos
+Grupo 3: 209 elementos
+Grupo 4: 336 elementos
+Grupo 5: 178 elementos
+
+
+------------------------------------------
+Algorithm: RecSysContentBased4
+Group (Rgrp Agglomerative): 0.0019028
+RgrpAgglomerative (1): 0.6475689
+RgrpAgglomerative (2): 0.6670765
+RgrpAgglomerative (3): 0.5430918
+RgrpAgglomerative (4): 0.6288629
+RgrpAgglomerative (5): 0.6479981
+   group_id   novelty       ILD  adjusted_diversity
+0         1  0.999081  0.566393            0.565873
+1         2  0.946973  0.548047            0.518986
+2         3  0.980072  0.556367            0.545280
+3         4  0.984031  0.559372            0.550440
+4         5  0.959938  0.555927            0.533656
+RMSE: 0.7911681
+Grupo 1: 209 elementos
+Grupo 2: 68 elementos
+Grupo 3: 209 elementos
+Grupo 4: 336 elementos
+Grupo 5: 178 elementos
+
+
+------------------------------------------
+Algorithm: RecSysContentBased4
+Group (Rgrp Agglomerative): 0.0019188
+RgrpAgglomerative (1): 0.6523833
+RgrpAgglomerative (2): 0.6690488
+RgrpAgglomerative (3): 0.5480515
+RgrpAgglomerative (4): 0.6410073
+RgrpAgglomerative (5): 0.6583224
+   group_id   novelty       ILD  adjusted_diversity
+0         1  1.029292  0.576793            0.593689
+1         2  0.980204  0.560689            0.549591
+2         3  1.010145  0.566908            0.572659
+3         4  1.017729  0.571341            0.581471
+4         5  0.995008  0.567516            0.564683
+RMSE: 0.7960658
+Grupo 1: 209 elementos
+Grupo 2: 68 elementos
+Grupo 3: 209 elementos
+Grupo 4: 336 elementos
+Grupo 5: 178 elementos
+
+
+------------------------------------------
+Algorithm: RecSysContentBased4
+Group (Rgrp Agglomerative): 0.0019357
+RgrpAgglomerative (1): 0.6435186
+RgrpAgglomerative (2): 0.6621587
+RgrpAgglomerative (3): 0.5384464
+RgrpAgglomerative (4): 0.6274695
+RgrpAgglomerative (5): 0.6465917
+   group_id   novelty       ILD  adjusted_diversity
+0         1  1.021380  0.575888            0.588201
+1         2  0.958754  0.553759            0.530919
+2         3  0.999027  0.564681            0.564132
+3         4  0.995360  0.565282            0.562659
+4         5  0.971034  0.561101            0.544848
+RMSE: 0.7893161
+Grupo 1: 209 elementos
+Grupo 2: 68 elementos
+Grupo 3: 209 elementos
+Grupo 4: 336 elementos
+Grupo 5: 178 elementos
+
+
+------------------------------------------
+Algorithm: RecSysContentBased4
+Group (Rgrp Agglomerative): 0.0018540
+RgrpAgglomerative (1): 0.6508123
+RgrpAgglomerative (2): 0.6686113
+RgrpAgglomerative (3): 0.5471896
+RgrpAgglomerative (4): 0.6372919
+RgrpAgglomerative (5): 0.6509739
+   group_id   novelty       ILD  adjusted_diversity
+0         1  1.009480  0.571583            0.577003
+1         2  0.960586  0.553585            0.531766
+2         3  0.988464  0.560188            0.553726
+3         4  0.991889  0.563358            0.558789
+4         5  0.970057  0.559869            0.543106
+RMSE: 0.7940369
+Grupo 1: 209 elementos
+Grupo 2: 68 elementos
+Grupo 3: 209 elementos
+Grupo 4: 336 elementos
+Grupo 5: 178 elementos
+
+
+------------------------------------------
+Algorithm: RecSysContentBased4
+Group (Rgrp Agglomerative): 0.0018616
+RgrpAgglomerative (1): 0.6498476
+RgrpAgglomerative (2): 0.6735988
+RgrpAgglomerative (3): 0.5501311
+RgrpAgglomerative (4): 0.6375539
+RgrpAgglomerative (5): 0.6550899
+   group_id   novelty       ILD  adjusted_diversity
+0         1  1.037163  0.579544            0.601082
+1         2  0.984002  0.561328            0.552349
+2         3  1.016787  0.568875            0.578425
+3         4  1.016284  0.571923            0.581237
+4         5  0.995786  0.568710            0.566314
+RMSE: 0.7952460
+Grupo 1: 209 elementos
+Grupo 2: 68 elementos
+Grupo 3: 209 elementos
+Grupo 4: 336 elementos
+Grupo 5: 178 elementos
+
+
+------------------------------------------
+Algorithm: RecSysContentBased4
+Group (Rgrp Agglomerative): 0.0019898
+RgrpAgglomerative (1): 0.6515506
+RgrpAgglomerative (2): 0.6689123
+RgrpAgglomerative (3): 0.5439165
+RgrpAgglomerative (4): 0.6351156
+RgrpAgglomerative (5): 0.6531393
+   group_id   novelty       ILD  adjusted_diversity
+0         1  1.017770  0.573169            0.583355
+1         2  0.971706  0.556505            0.540760
+2         3  1.000976  0.563013            0.563563
+3         4  1.008728  0.567777            0.572734
+4         5  0.982854  0.562873            0.553222
+RMSE: 0.7937235
+Grupo 1: 209 elementos
+Grupo 2: 68 elementos
+Grupo 3: 209 elementos
+Grupo 4: 336 elementos
+Grupo 5: 178 elementos
+
+
+------------------------------------------
+Algorithm: RecSysContentBased4
+Group (Rgrp Agglomerative): 0.0017885
+RgrpAgglomerative (1): 0.6502225
+RgrpAgglomerative (2): 0.6695290
+RgrpAgglomerative (3): 0.5504476
+RgrpAgglomerative (4): 0.6365746
+RgrpAgglomerative (5): 0.6550405
+   group_id   novelty       ILD  adjusted_diversity
+0         1  1.032857  0.579292            0.598327
+1         2  0.976696  0.561350            0.548268
+2         3  1.017184  0.570921            0.580732
+3         4  1.018888  0.573587            0.584421
+4         5  1.000921  0.571781            0.572308
+RMSE: 0.7948644
+Grupo 1: 209 elementos
+Grupo 2: 68 elementos
+Grupo 3: 209 elementos
+Grupo 4: 336 elementos
+Grupo 5: 178 elementos
+
+
+------------------------------------------
+Algorithm: RecSysContentBased4
+Group (Rgrp Agglomerative): 0.0018627
+RgrpAgglomerative (1): 0.6559582
+RgrpAgglomerative (2): 0.6743511
+RgrpAgglomerative (3): 0.5532876
+RgrpAgglomerative (4): 0.6435610
+RgrpAgglomerative (5): 0.6595504
+   group_id   novelty       ILD  adjusted_diversity
+0         1  1.019863  0.575593            0.587027
+1         2  0.975373  0.559291            0.545518
+2         3  1.000839  0.565071            0.565545
+3         4  1.003132  0.568133            0.569913
+4         5  0.980207  0.564717            0.553541
+RMSE: 0.7981071
+Grupo 1: 209 elementos
+Grupo 2: 68 elementos
+Grupo 3: 209 elementos
+Grupo 4: 336 elementos
+Grupo 5: 178 elementos
+
+
+------------------------------------------
+Algorithm: RecSysContentBased4
+Group (Rgrp Agglomerative): 0.0018740
+RgrpAgglomerative (1): 0.6557158
+RgrpAgglomerative (2): 0.6724172
+RgrpAgglomerative (3): 0.5503411
+RgrpAgglomerative (4): 0.6358330
+RgrpAgglomerative (5): 0.6545084
+   group_id   novelty       ILD  adjusted_diversity
+0         1  1.016745  0.575437            0.585073
+1         2  0.961685  0.555556            0.534271
+2         3  1.003985  0.566216            0.568473
+3         4  1.002598  0.569214            0.570693
+4         5  0.980613  0.565639            0.554674
+RMSE: 0.7955602
+Grupo 1: 209 elementos
+Grupo 2: 68 elementos
+Grupo 3: 209 elementos
+Grupo 4: 336 elementos
+Grupo 5: 178 elementos
+
+
+------------------------------------------
+Algorithm: RecSysContentBased4
+Group (Rgrp Agglomerative): 0.0018861
+RgrpAgglomerative (1): 0.6487868
+RgrpAgglomerative (2): 0.6647982
+RgrpAgglomerative (3): 0.5432713
+RgrpAgglomerative (4): 0.6338276
+RgrpAgglomerative (5): 0.6487706
+   group_id   novelty       ILD  adjusted_diversity
+0         1  1.031000  0.574785            0.592604
+1         2  0.981011  0.558369            0.547767
+2         3  1.013601  0.564944            0.572628
+3         4  1.022748  0.570300            0.583274
+4         5  1.000666  0.567178            0.567556
+RMSE: 0.7921443
+Grupo 1: 209 elementos
+Grupo 2: 68 elementos
+Grupo 3: 209 elementos
+Grupo 4: 336 elementos
+Grupo 5: 178 elementos
+
+
+------------------------------------------
+Algorithm: RecSysContentBased4
+Group (Rgrp Agglomerative): 0.0018185
+RgrpAgglomerative (1): 0.6474191
+RgrpAgglomerative (2): 0.6649182
+RgrpAgglomerative (3): 0.5440078
+RgrpAgglomerative (4): 0.6260840
+RgrpAgglomerative (5): 0.6459235
+   group_id   novelty       ILD  adjusted_diversity
+0         1  0.989437  0.565186            0.559217
+1         2  0.941417  0.546645            0.514622
+2         3  0.972636  0.554628            0.539452
+3         4  0.969649  0.556494            0.539604
+4         5  0.953882  0.554847            0.529259
+RMSE: 0.7903193
+Grupo 1: 209 elementos
+Grupo 2: 68 elementos
+Grupo 3: 209 elementos
+Grupo 4: 336 elementos
+Grupo 5: 178 elementos
+
+
+------------------------------------------
+Algorithm: RecSysContentBased4
+Group (Rgrp Agglomerative): 0.0018628
+RgrpAgglomerative (1): 0.6497015
+RgrpAgglomerative (2): 0.6692812
+RgrpAgglomerative (3): 0.5473787
+RgrpAgglomerative (4): 0.6330826
+RgrpAgglomerative (5): 0.6534298
+   group_id   novelty       ILD  adjusted_diversity
+0         1  1.017750  0.575097            0.585305
+1         2  0.967402  0.557469            0.539298
+2         3  1.004203  0.565858            0.568237
+3         4  0.997548  0.566637            0.565248
+4         5  0.980140  0.564285            0.553079
+RMSE: 0.7936011

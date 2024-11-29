@@ -18,7 +18,11 @@ top_users = True  # True: usar usuários com mais classificações; False: caso 
 top_items = True  # True: usar filmes com mais classificações; False: caso contrário
 
 # Algoritmo de recomendação
-algorithms = ['RecSysNCF2', 'RecSysNCF2', 'RecSysNCF2', 'RecSysNCF2', 'RecSysNCF2', 'RecSysNCF2', 'RecSysNCF2', 'RecSysNCF2', 'RecSysNCF2', 'RecSysNCF2']
+# algorithms = ['RecSysNCF2', 'RecSysNCF2', 'RecSysNCF2', 'RecSysNCF2', 'RecSysNCF2', 'RecSysNCF2', 'RecSysNCF2', 'RecSysNCF2', 'RecSysNCF2', 'RecSysNCF2']
+# algorithms = ['RecSysNCF', 'RecSysNCF', 'RecSysNCF', 'RecSysNCF', 'RecSysNCF', 'RecSysNCF', 'RecSysNCF', 'RecSysNCF', 'RecSysNCF', 'RecSysNCF']
+algorithms = ['RecSysContentBased4'] * 50
+
+resultados = []
 
 # Abrindo o arquivo para redirecionar saída
 with open(output_file, 'w') as f:
@@ -62,3 +66,10 @@ with open(output_file, 'w') as f:
             print(metrics_by_group)
 
             # Adicione o bloco de código para gerar gráficos se necessário
+
+            # Armazenando os resultados para cada algoritmo
+            resultados.append(f'{RgrpGender:.7f}')
+
+print(resultados)  # Exibe todos os resultados
+maior = max(resultados)
+print(maior) # Exibe o menor dos resultados

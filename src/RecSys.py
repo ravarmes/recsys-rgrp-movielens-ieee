@@ -9,7 +9,13 @@ import RecSysKNN2
 import RecSysKNN3
 import RecSysKNN4
 import RecSysKNN5
+import RecSysKNN6
 import RecSysRBM
+import RecSysContentBased
+import RecSysContentBased2
+import RecSysContentBased3
+import RecSysContentBased4
+
 
 class RecSys():
         
@@ -211,7 +217,7 @@ class RecSys():
             X_est = RS.fit_model()
         elif(algorithm == 'RecSysNMF'):
             # RS = RecSysNMF.RecSysNMF(n_components=5, ratings=X)
-            RS = RecSysNMF.RecSysNMF(n_components=5, ratings=X)
+            RS = RecSysNMF.RecSysNMF(n_components=10, ratings=X)
             X_est = RS.fit_model()
         elif(algorithm == 'RecSysSVD'):
             RS = RecSysSVD.RecSysSVD(k=50, ratings=X)
@@ -235,11 +241,45 @@ class RecSys():
         elif algorithm == 'RecSysKNN5':
             RS = RecSysKNN5.RecSysKNN5(k=100, ratings=X, user_based=True)
             X_est = RS.fit_model()
+        elif algorithm == 'RecSysKNN6':
+            RS = RecSysKNN6.knn_RecSysKNN(k=5, ratings=X)
+            X_est, error = RS.fit_model()
         elif algorithm == 'RecSysRBM':
             RS = RecSysRBM.RecSysRBM(ratings=X, n_components=5, learning_rate=0.01, n_iter=200)
             # RS = RecSysRBM.RecSysRBM(ratings=X, n_components=10, learning_rate=0.01, n_iter=2000)
             X_est = RS.fit_model()
+        elif algorithm == 'RecSysContentBased':
+            RS = RecSysContentBased.RecSysContentBased(k=5, ratings=X, movies_file='Data/MovieLens-1M/movies.dat')
+            X_est = RS.fit_model()
+        elif algorithm == 'RecSysContentBased2':
+            RS = RecSysContentBased2.RecSysContentBased2(k=5, ratings=X, movie_file='Data/MovieLens-1M/movies-1000.txt')
+            X_est = RS.fit_model()
+        elif algorithm == 'RecSysContentBased3':
+            # RS = RecSysContentBased3.RecSysContentBased3(k=100, ratings=X, movie_file='Data/MovieLens-1M/movies-1000.txt')
+            # RS = RecSysContentBased3.RecSysContentBased3(k=100, ratings=X, movie_file='Data/MovieLens-1M/movies-1000.txt', regularization=1e-5)
+            RS = RecSysContentBased3.RecSysContentBased3(k=50, ratings=X, movie_file='Data/MovieLens-1M/movies-1000.txt', regularization=10)
+            X_est = RS.fit_model()
+        elif algorithm == 'RecSysContentBased4':
+            # RS = RecSysContentBased4.RecSysContentBased4(k=100, ratings=X, movie_file='Data/MovieLens-1M/movies-1000.txt', regularization=0.1)
+            # X_est = RS.fit_model()
             
+            # RS = RecSysContentBased4.RecSysContentBased4(k=50, ratings=X, movie_file='Data/MovieLens-1M/movies-1000.txt', regularization=0.01, alpha=0.5)
+            # RS = RecSysContentBased4.RecSysContentBased4(k=5, ratings=X, movie_file='Data/MovieLens-1M/movies-1000.txt', regularization=0.01, alpha=0.1)
+            # RS = RecSysContentBased4.RecSysContentBased4(k=3, ratings=X, movie_file='Data/MovieLens-1M/movies-1000.txt', regularization=0.05, alpha=1)
+            # RS = RecSysContentBased4.RecSysContentBased4(k=5, ratings=X, movie_file='Data/MovieLens-1M/movies-1000.txt', regularization=0.01, alpha=1e-6)
+            RS = RecSysContentBased4.RecSysContentBased4(k=5, ratings=X, movie_file='Data/MovieLens-1M/movies-1000.txt', regularization=0.1, alpha=1e-6)
+            X_est = RS.fit_model()
+
+            # k_values = [10, 25, 50]
+            # regularization_values = [0.01, 0.1, 0.5]
+            # alpha_values = [0.5, 1.0, 2.0]
+
+            # for k in k_values:
+            #     for reg in regularization_values:
+            #         for alpha in alpha_values:
+            #             print(f"k={k}, regularization={reg}, alpha={alpha}")
+            #             model = RecSysContentBased4.RecSysContentBased4(k=k, ratings=X, movie_file='Data/MovieLens-1M/movies-1000.txt', regularization=reg, alpha=alpha)
+            #             pred = model.fit_model()
         else:
             RecSysNMF
         return X_est  

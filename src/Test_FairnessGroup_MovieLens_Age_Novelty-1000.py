@@ -5,7 +5,6 @@ from UserFairness import GroupLossVariance
 import matplotlib.pyplot as plt
 import novelty as novelty
 
-
 # reading data from 3883 movies and 6040 users 
 Data_path = 'Data/MovieLens-1M'
 n_users=  1000
@@ -17,7 +16,9 @@ top_items = True # True: to use movies with more ratings; False: otherwise
 # algorithms = ['RecSysALS', 'RecSysKNN', 'RecSysNCF']
 # algorithms = ['RecSysKNN3']
 # algorithms = ['RecSysKNN2']
-algorithms = ['RecSysKNN4']
+# algorithms = ['RecSysKNN4']
+algorithms = ['RecSysContentBased4']
+
 
 for algorithm in algorithms:
 

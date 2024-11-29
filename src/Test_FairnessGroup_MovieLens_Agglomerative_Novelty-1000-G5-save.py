@@ -25,7 +25,9 @@ top_users = True  # True: usar usuários com mais classificações; False: caso 
 top_items = True  # True: usar filmes com mais classificações; False: caso contrário
 
 # Algoritmo de recomendação
-algorithms = ['RecSysNCF2']
+# algorithms = ['RecSysNCF2', 'RecSysNCF2', 'RecSysNCF2', 'RecSysNCF2', 'RecSysNCF2', 'RecSysNCF2', 'RecSysNCF2', 'RecSysNCF2', 'RecSysNCF2', 'RecSysNCF2']
+# algorithms = ['RecSysNCF', 'RecSysNCF', 'RecSysNCF', 'RecSysNCF', 'RecSysNCF', 'RecSysNCF', 'RecSysNCF', 'RecSysNCF', 'RecSysNCF', 'RecSysNCF']
+algorithms = ['RecSysContentBased4'] * 50
 
 resultados = []
 
@@ -118,3 +120,5 @@ with open(output_file, 'w') as f:
             resultados.append(f'{RgrpAgglomerative:.7f}')
 
 print(resultados)  # Exibe todos os resultados
+menor = min(resultados)
+print(menor) # Exibe o menor dos resultados

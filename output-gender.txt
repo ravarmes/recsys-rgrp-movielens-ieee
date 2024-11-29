@@ -1,0 +1,200 @@
+
+
+------------------------------------------
+Algorithm: RecSysContentBased4
+Group (Rgrp Gender): 0.0001773
+RgrpGender (masculine): 0.6273513
+RgrpGender (feminine) : 0.6539859
+   group_id   novelty       ILD  adjusted_diversity
+0         1  0.989081  0.560862            0.554739
+1         2  1.011772  0.569946            0.576655
+
+
+------------------------------------------
+Algorithm: RecSysContentBased4
+Group (Rgrp Gender): 0.0001805
+RgrpGender (masculine): 0.6283447
+RgrpGender (feminine) : 0.6552158
+   group_id   novelty       ILD  adjusted_diversity
+0         1  1.012666  0.569667            0.576883
+1         2  1.038696  0.579617            0.602046
+
+
+------------------------------------------
+Algorithm: RecSysContentBased4
+Group (Rgrp Gender): 0.0001608
+RgrpGender (masculine): 0.6275403
+RgrpGender (feminine) : 0.6529024
+   group_id   novelty       ILD  adjusted_diversity
+0         1  1.003955  0.566111            0.568350
+1         2  1.028168  0.575391            0.591599
+
+
+------------------------------------------
+Algorithm: RecSysContentBased4
+Group (Rgrp Gender): 0.0001828
+RgrpGender (masculine): 0.6269450
+RgrpGender (feminine) : 0.6539872
+   group_id   novelty       ILD  adjusted_diversity
+0         1  0.982891  0.559179            0.549613
+1         2  1.007309  0.568788            0.572945
+
+
+------------------------------------------
+Algorithm: RecSysContentBased4
+Group (Rgrp Gender): 0.0001716
+RgrpGender (masculine): 0.6260851
+RgrpGender (feminine) : 0.6522819
+   group_id   novelty       ILD  adjusted_diversity
+0         1  1.000692  0.563357            0.563747
+1         2  1.026151  0.573313            0.588306
+
+
+------------------------------------------
+Algorithm: RecSysContentBased4
+Group (Rgrp Gender): 0.0001693
+RgrpGender (masculine): 0.6333485
+RgrpGender (feminine) : 0.6593732
+   group_id   novelty       ILD  adjusted_diversity
+0         1  1.010996  0.570833            0.577110
+1         2  1.040799  0.581316            0.605034
+
+
+------------------------------------------
+Algorithm: RecSysContentBased4
+Group (Rgrp Gender): 0.0001590
+RgrpGender (masculine): 0.6270133
+RgrpGender (feminine) : 0.6522302
+   group_id   novelty       ILD  adjusted_diversity
+0         1  0.966463  0.556294            0.537638
+1         2  0.995041  0.567416            0.564602
+
+
+------------------------------------------
+Algorithm: RecSysContentBased4
+Group (Rgrp Gender): 0.0001387
+RgrpGender (masculine): 0.6249699
+RgrpGender (feminine) : 0.6485259
+   group_id   novelty       ILD  adjusted_diversity
+0         1  0.994086  0.566107            0.562760
+1         2  1.019972  0.576419            0.587932
+
+
+------------------------------------------
+Algorithm: RecSysContentBased4
+Group (Rgrp Gender): 0.0001835
+RgrpGender (masculine): 0.6279853
+RgrpGender (feminine) : 0.6550793
+   group_id   novelty       ILD  adjusted_diversity
+0         1  0.991859  0.563416            0.558830
+1         2  1.018077  0.573873            0.584248
+
+
+------------------------------------------
+Algorithm: RecSysContentBased4
+Group (Rgrp Gender): 0.0001862
+RgrpGender (masculine): 0.6215944
+RgrpGender (feminine) : 0.6488889
+   group_id   novelty       ILD  adjusted_diversity
+0         1  0.989049  0.564495            0.558313
+1         2  1.012799  0.573941            0.581287
+
+
+------------------------------------------
+Algorithm: RecSysContentBased4
+Group (Rgrp Gender): 0.0001464
+RgrpGender (masculine): 0.6326784
+RgrpGender (feminine) : 0.6568749
+   group_id   novelty       ILD  adjusted_diversity
+0         1  0.998642  0.563971            0.563206
+1         2  1.029694  0.575290            0.592373
+
+
+------------------------------------------
+Algorithm: RecSysContentBased4
+Group (Rgrp Gender): 0.0001414
+RgrpGender (masculine): 0.6234526
+RgrpGender (feminine) : 0.6472362
+   group_id   novelty       ILD  adjusted_diversity
+0         1  0.980337  0.560362            0.549344
+1         2  0.997695  0.567155            0.565848
+
+
+------------------------------------------
+Algorithm: RecSysContentBased4
+Group (Rgrp Gender): 0.0001245
+RgrpGender (masculine): 0.6236044
+RgrpGender (feminine) : 0.6459194
+   group_id   novelty       ILD  adjusted_diversity
+0         1  0.978365  0.558951            0.546858
+1         2  1.002347  0.568975            0.570311
+
+
+------------------------------------------
+Algorithm: RecSysContentBased4
+Group (Rgrp Gender): 0.0001707
+RgrpGender (masculine): 0.6287559
+RgrpGender (feminine) : 0.6548857
+   group_id   novelty       ILD  adjusted_diversity
+0         1  0.999268  0.566761            0.566347
+1         2  1.028402  0.577961            0.594377
+
+
+------------------------------------------
+Algorithm: RecSysContentBased4
+Group (Rgrp Gender): 0.0001817
+RgrpGender (masculine): 0.6212985
+RgrpGender (feminine) : 0.6482611
+   group_id   novelty       ILD  adjusted_diversity
+0         1  0.964304  0.555357            0.535533
+1         2  1.001253  0.569856            0.570571
+
+
+------------------------------------------
+Algorithm: RecSysContentBased4
+Group (Rgrp Gender): 0.0001141
+RgrpGender (masculine): 0.6307329
+RgrpGender (feminine) : 0.6520934
+   group_id   novelty       ILD  adjusted_diversity
+0         1  1.010710  0.568383            0.574471
+1         2  1.039234  0.578735            0.601441
+
+
+------------------------------------------
+Algorithm: RecSysContentBased4
+Group (Rgrp Gender): 0.0001737
+RgrpGender (masculine): 0.6280709
+RgrpGender (feminine) : 0.6544312
+   group_id   novelty       ILD  adjusted_diversity
+0         1  0.990019  0.564004            0.558375
+1         2  1.010060  0.572553            0.578313
+
+
+------------------------------------------
+Algorithm: RecSysContentBased4
+Group (Rgrp Gender): 0.0001684
+RgrpGender (masculine): 0.6248351
+RgrpGender (feminine) : 0.6507923
+   group_id   novelty       ILD  adjusted_diversity
+0         1  0.979085  0.559213            0.547518
+1         2  1.002787  0.567825            0.569408
+
+
+------------------------------------------
+Algorithm: RecSysContentBased4
+Group (Rgrp Gender): 0.0001316
+RgrpGender (masculine): 0.6243192
+RgrpGender (feminine) : 0.6472624
+   group_id   novelty       ILD  adjusted_diversity
+0         1  0.971839  0.557449            0.541751
+1         2  1.002434  0.568711            0.570096
+
+
+------------------------------------------
+Algorithm: RecSysContentBased4
+Group (Rgrp Gender): 0.0001405
+RgrpGender (masculine): 0.6221651
+RgrpGender (feminine) : 0.6458715
+   group_id   novelty       ILD  adjusted_diversity
+0         1  0.983383  0.561421            0.552092
+1         2  1.008129  0.569804            0.574436

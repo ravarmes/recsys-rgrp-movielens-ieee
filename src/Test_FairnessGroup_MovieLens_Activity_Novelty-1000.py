@@ -21,7 +21,8 @@ top_items = True # True: to use movies with more ratings; False: otherwise
 # algorithms = ['RecSysNCF2']
 # algorithms = ['RecSysALS']
 # algorithms = ['RecSysNCF2', 'RecSysNCF2', 'RecSysNCF2']
-algorithms = ['RecSysKNN5']
+# algorithms = ['RecSysContentBased']
+algorithms = ['RecSysContentBased4']
 
 
 for algorithm in algorithms:
@@ -44,8 +45,8 @@ for algorithm in algorithms:
     if not os.path.exists(file_path_X):
         X.to_excel(file_path_X, index=True)
 
-    # file_path_X_est = f'X_est_{algorithm}.xlsx'  # Definindo o caminho e nome do arquivo
-    # X_est.to_excel(file_path_X_est, index=True)  # Altere index=False se não quiser incluir o índice
+    file_path_X_est = f'X_est_{algorithm}.xlsx'  # Definindo o caminho e nome do arquivo
+    X_est.to_excel(file_path_X_est, index=True)  # Altere index=False se não quiser incluir o índice
 
     # Group fairness. Let I be the set of all users/items and G = {G1 . . . ,Gg} be a partition of users/items into g groups. 
     # The loss of group i as the mean squared estimation error over all known ratings in group i
