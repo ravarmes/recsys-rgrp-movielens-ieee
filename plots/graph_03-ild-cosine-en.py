@@ -4,76 +4,76 @@ import numpy as np
 # Dados fornecidos
 data = {
     "ALS | Activity": {
-        "Active": 0.5072996,
-        "Inactive": 0.5579151
+        "Active": 0.328033,
+        "Inactive": 0.301388
     },
     "ALS | Age": {
-        "00": 0.5988816,
-        "18": 0.5765943,
-        "25": 0.5545493,
-        "35": 0.5379932,
-        "45": 0.5287662,
-        "50": 0.5270961,
-        "56": 0.5724602
+        "00": 0.315705,
+        "18": 0.299067,
+        "25": 0.290623,
+        "35": 0.312620,
+        "45": 0.325341,
+        "50": 0.341853,
+        "56": 0.314255
     },
     "ALS | Gender": {
-        "Male": 0.5414160,
-        "Female": 0.5988678
+        "Male": 0.408281,
+        "Female": 0.437081
     },
     "ALS | Agglomerative": {
-        "G1": 0.5988678,
-        "G2": 0.5165295,
-        "G3": 0.5257680,
-        "G4": 0.5672233,
-        "G5": 0.5356081
+        "G1": 0.437081,
+        "G2": 0.429517,
+        "G3": 0.415467,
+        "G4": 0.400216,
+        "G5": 0.406956
     },
     "NCF | Activity": {
-        "Active": 0.6736042,
-        "Inactive": 0.7053388
+        "Active": 0.362572,
+        "Inactive": 0.339928
     },
     "NCF | Age": {
-        "00": 0.7503187,
-        "18": 0.7484501,
-        "25": 0.6980305,
-        "35": 0.6789333,
-        "45": 0.6721374,
-        "50": 0.6790036,
-        "56": 0.7068404
+        "00": 0.388948,
+        "18": 0.382073,
+        "25": 0.366133,
+        "35": 0.349264,
+        "45": 0.345146,
+        "50": 0.357089,
+        "56": 0.331451
     },
     "NCF | Gender": {
-        "Male": 0.6834183,
-        "Female": 0.7557694
+        "Male": 0.455505,
+        "Female": 0.452497
     },
     "NCF | Agglomerative": {
-        "G1": 0.7597630,
-        "G2": 0.6992425,
-        "G3": 0.6409658,
-        "G4": 0.7004714,
-        "G5": 0.6793387
+        "G1": 0.432640,
+        "G2": 0.438289,
+        "G3": 0.429463,
+        "G4": 0.434551,
+        "G5": 0.436447
     },
     "CBF | Activity": {
-        "Active": 0.6958071,
-        "Inactive": 0.6275687
+        "Active": 0.383118,
+        "Inactive": 0.439678
     },
     "CBF | Age": {
-        "00": 0.6896335,
-        "18": 0.6388872,
-        "25": 0.6278901,
-        "35": 0.5693930,
-        "45": 0.5658008,
-        "50": 0.5538033,
-        "56": 0.5680818
+        "00": 0.388485,
+        "18": 0.414707,
+        "25": 0.425062,
+        "35": 0.431325,
+        "45": 0.445817,
+        "50": 0.441043,
+        "56": 0.408332
     },
     "CBF | Gender": {
-        "Male": 0.6217455,
-        "Female": 0.6536329
+        "Male": 0.55910,
+        "Female": 0.57126
     },
     "CBF | Agglomerative": {
-        "G1": 0.6515506,
-        "G2": 0.6689123,
-        "G3": 0.5439165,
-        "G4": 0.6351156,
-        "G5": 0.6531393
+        "G1": 0.573169,
+        "G2": 0.556505,
+        "G3": 0.563013,
+        "G4": 0.567777,
+        "G5": 0.562873
     }
 }
 
@@ -109,38 +109,29 @@ colors_4 = cmap_4(np.linspace(0.3, 0.7, 5))  # Para 5 grupos
 fig, axs = plt.subplots(3, 4, figsize=(20, 15))
 fig.subplots_adjust(left=0.314, bottom=0.23, right=0.993, top=0.945, wspace=0.463, hspace=0.451)
 
-# Determinando o limite global do eixo Y
-all_values = []
-for groups in data.values():
-    all_values.extend(groups.values())
-
-ymin = min(all_values) - 0.0500  # Pequena margem abaixo
-ymax = max(all_values) + 0.0002  # Pequena margem acima
-
 # Iterando sobre os dados e os subplots
 for i, (alg, groups) in enumerate(data.items()):
     ax = axs[i // 4, i % 4]
-    
-    # Selecionando cores de acordo com o índice
     if i % 4 == 0:
         colors = colors_1
+        hatches = ['//', '//']  # Diferentes padrões para 2 grupos
     elif i % 4 == 1:
         colors = colors_2
+        hatches = ['//', '//', '//', '//', '//', '//', '//']  # Vários padrões para 7 grupos
     elif i % 4 == 2:
         colors = colors_3
+        hatches = ['//', '//']  # Diferentes padrões para 2 grupos
     else:
         colors = colors_4
+        hatches = ['//', '//', '//', '//', '//']  # Vários padrões para 5 grupos
 
-    # Criando as barras
     for j, (group, loss) in enumerate(groups.items()):
-        ax.bar(group, loss, color=colors[j % len(colors)])
-    
-    # Configurando o eixo Y e os rótulos
-    ax.set_ylim(ymin, ymax)  # Aplicando o limite global no eixo Y
+        bar = ax.bar(group, loss, color=colors[j % len(colors)], hatch=hatches[j % len(hatches)])  # Adicionando hachuras
     if i in [0, 4, 8]:  # Apenas para os subplots 1, 5 e 9
-        ax.set_ylabel('Group Loss')
+        ax.set_ylabel('Diversity Loss')
     else:
         ax.set_yticklabels([])  # Remove os rótulos do eixo y para os outros subplots
+    ax.set_ylim(0, 0.58)  # Definindo a escala do eixo y
     ax.set_title(titles[i])
 
 # Ajustando layout

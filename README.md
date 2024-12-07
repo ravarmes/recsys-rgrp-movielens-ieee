@@ -1,5 +1,5 @@
 <h1 align="center">
-    <img alt="RVM" src="https://github.com/ravarmes/recsys-rgrp-movielens/blob/main/assets/logo.jpg" />
+    <img alt="RVM" src="https://github.com/ravarmes/recsys-rgrp-movielens-ieee/blob/main/assets/logo.jpg" />
 </h1>
 
 <h3 align="center">
@@ -9,7 +9,7 @@
 <p align="center">Example of Clustering Using Social Fairness Measures</p>
 
 <p align="center">
-  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/ravarmes/recsys-rgrp-movielens?color=%2304D361">
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/ravarmes/recsys-rgrp-movielens-ieee?color=%2304D361">
 
   <a href="http://www.linkedin.com/in/rafael-vargas-mesquita">
     <img alt="Made by Rafael Vargas Mesquita" src="https://img.shields.io/badge/made%20by-Rafael%20Vargas%20Mesquita-%2304D361">
@@ -17,8 +17,8 @@
 
   <img alt="License" src="https://img.shields.io/badge/license-MIT-%2304D361">
 
-  <a href="https://github.com/ravarmes/recsys-rgrp-movielens/stargazers">
-    <img alt="Stargazers" src="https://img.shields.io/github/stars/ravarmes/recsys-rgrp-movielens?style=social">
+  <a href="https://github.com/ravarmes/recsys-rgrp-movielens-ieee/stargazers">
+    <img alt="Stargazers" src="https://img.shields.io/github/stars/ravarmes/recsys-rgrp-movielens-ieee?style=social">
   </a>
 </p>
 
@@ -32,7 +32,7 @@
 This study investigates fairness in recommendation systems using the MovieLens dataset, applying collaborative filtering strategies: ALS, KNN, and NMF. We assess unfairness across different clustering configurations: Gender, Age, Activity, and Agglomerative. The results indicate significant variations in unfairness among the strategies, with the Agglomerative method standing out for exhibiting the highest levels of group unfairness in most approaches. This analysis suggests the need for careful selection of both filtering strategy and clustering method to promote fairer and more inclusive recommendation systems, highlighting the importance of considering multiple dimensions of unfairness in the design of these systems.
 
 <h1 align="center">
-    <img alt="abstract" src="https://github.com/ravarmes/recsys-rgrp-movielens/blob/main/assets/graphical_abstract.png" />
+    <img alt="abstract" src="https://github.com/ravarmes/recsys-rgrp-movielens-ieee/blob/main/assets/graphical_abstract.png" />
 </h1>
 
 ### Social Objective Functions

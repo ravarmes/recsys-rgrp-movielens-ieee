@@ -1,22 +1,7 @@
 import pandas as pd
 import RecSysALS
-import RecSysKNN
-import RecSysNMF
 import RecSysNCF
-import RecSysNCF2
-# import RecSysSVD
-import RecSysKNN2
-import RecSysKNN3
-import RecSysKNN4
-import RecSysKNN5
-import RecSysKNN6
-import RecSysRBM
-import RecSysContentBased
-import RecSysContentBased2
-import RecSysContentBased3
-import RecSysContentBased4
-import RecSysContentBased5
-
+import RecSysCBF
 
 class RecSys():
         
@@ -207,74 +192,22 @@ class RecSys():
             
             # factorization parameters
             rank = 20 # before 20
-            lambda_ = 10 # before 20 - ridge regularizer parameter
+            lambda_ = 20 # before 20 - ridge regularizer parameter
 
             # initiate a recommender system of type ALS (Alternating Least Squares)
             RS = RecSysALS.als_RecSysALS(rank,lambda_)
             X_est, error = RS.fit_model(X)
 
-        elif(algorithm == 'RecSysKNN'):
-            RS = RecSysKNN.RecSysKNN(k=5, ratings=X, user_based=True)
-            X_est = RS.fit_model()
-        elif(algorithm == 'RecSysNMF'):
-            # RS = RecSysNMF.RecSysNMF(n_components=5, ratings=X)
-            RS = RecSysNMF.RecSysNMF(n_components=10, ratings=X)
-            X_est = RS.fit_model()
-        elif(algorithm == 'RecSysSVD'):
-            RS = RecSysSVD.RecSysSVD(k=50, ratings=X)
-            X_est = RS.fit_model()
         elif(algorithm == 'RecSysNCF'):
             RS = RecSysNCF.RecSysNCF(n_users=1000, n_items=1000, n_factors=20, ratings=X)
             X_est, error = RS.fit_model()
-        elif(algorithm == 'RecSysNCF2'):
-            # RS = RecSysNCF2.RecSysNCF2(n_users=1000, n_items=1000, n_factors=128, ratings=X)
-            RS = RecSysNCF2.RecSysNCF2(n_users=1000, n_items=1000, n_factors=50, ratings=X)
-            X_est, error = RS.fit_model()
-        elif algorithm == 'RecSysKNN2':
-            RS = RecSysKNN2.RecSysKNN2(k=50, ratings=X, user_based=True)
+
+        elif algorithm == 'RecSysCBF':
+            RS = RecSysCBF.RecSysCBF(k=5, ratings=X, movie_file='Data/MovieLens-1M/movies-1000.txt', regularization=0.1, alpha=1e-6)
             X_est = RS.fit_model()
-        elif algorithm == 'RecSysKNN3':
-            RS = RecSysKNN3.RecSysKNN3(k=5, ratings=X, user_based=True)
-            X_est = RS.fit_model()
-        elif algorithm == 'RecSysKNN4':
-            RS = RecSysKNN4.RecSysKNN4(k=28, ratings=X, user_based=True)
-            X_est = RS.fit_model()
-        elif algorithm == 'RecSysKNN5':
-            RS = RecSysKNN5.RecSysKNN5(k=100, ratings=X, user_based=True)
-            X_est = RS.fit_model()
-        elif algorithm == 'RecSysKNN6':
-            RS = RecSysKNN6.knn_RecSysKNN(k=5, ratings=X)
-            X_est, error = RS.fit_model()
-        elif algorithm == 'RecSysRBM':
-            RS = RecSysRBM.RecSysRBM(ratings=X, n_components=5, learning_rate=0.01, n_iter=200)
-            # RS = RecSysRBM.RecSysRBM(ratings=X, n_components=10, learning_rate=0.01, n_iter=2000)
-            X_est = RS.fit_model()
-        elif algorithm == 'RecSysContentBased':
-            RS = RecSysContentBased.RecSysContentBased(k=5, ratings=X, movies_file='Data/MovieLens-1M/movies.dat')
-            X_est = RS.fit_model()
-        elif algorithm == 'RecSysContentBased2':
-            RS = RecSysContentBased2.RecSysContentBased2(k=5, ratings=X, movie_file='Data/MovieLens-1M/movies-1000.txt')
-            X_est = RS.fit_model()
-        elif algorithm == 'RecSysContentBased3':
-            # RS = RecSysContentBased3.RecSysContentBased3(k=100, ratings=X, movie_file='Data/MovieLens-1M/movies-1000.txt')
-            # RS = RecSysContentBased3.RecSysContentBased3(k=100, ratings=X, movie_file='Data/MovieLens-1M/movies-1000.txt', regularization=1e-5)
-            RS = RecSysContentBased3.RecSysContentBased3(k=50, ratings=X, movie_file='Data/MovieLens-1M/movies-1000.txt', regularization=10)
-            X_est = RS.fit_model()
-        elif algorithm == 'RecSysContentBased4':
-            # RS = RecSysContentBased4.RecSysContentBased4(k=50, ratings=X, movie_file='Data/MovieLens-1M/movies-1000.txt', regularization=0.01, alpha=0.5)
-            # RS = RecSysContentBased4.RecSysContentBased4(k=5, ratings=X, movie_file='Data/MovieLens-1M/movies-1000.txt', regularization=0.01, alpha=0.1)
-            # RS = RecSysContentBased4.RecSysContentBased4(k=3, ratings=X, movie_file='Data/MovieLens-1M/movies-1000.txt', regularization=0.05, alpha=1)
-            # RS = RecSysContentBased4.RecSysContentBased4(k=5, ratings=X, movie_file='Data/MovieLens-1M/movies-1000.txt', regularization=0.01, alpha=1e-6)
-            RS = RecSysContentBased4.RecSysContentBased4(k=5, ratings=X, movie_file='Data/MovieLens-1M/movies-1000.txt', regularization=0.1, alpha=1e-6)
-            X_est = RS.fit_model()
-        elif algorithm == 'RecSysContentBased5':
-            # RS = RecSysContentBased3.RecSysContentBased3(k=100, ratings=X, movie_file='Data/MovieLens-1M/movies-1000.txt')
-            # RS = RecSysContentBased3.RecSysContentBased3(k=100, ratings=X, movie_file='Data/MovieLens-1M/movies-1000.txt', regularization=1e-5)
-            RS = RecSysContentBased5.RecSysContentBased5(ratings=X, movie_file='Data/MovieLens-1M/movies-1000.txt')
-            X_est = RS.fit_model()
-        
+
         else:
-            RecSysNMF
+            RecSysALS
         return X_est  
         
 
