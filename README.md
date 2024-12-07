@@ -29,7 +29,7 @@
 
 ## :page_with_curl: About the Project <a name="-sobre"/></a>
 
-This study investigates fairness in recommendation systems using the MovieLens dataset, applying collaborative filtering strategies: ALS, KNN, and NMF. We assess unfairness across different clustering configurations: Gender, Age, Activity, and Agglomerative. The results indicate significant variations in unfairness among the strategies, with the Agglomerative method standing out for exhibiting the highest levels of group unfairness in most approaches. This analysis suggests the need for careful selection of both filtering strategy and clustering method to promote fairer and more inclusive recommendation systems, highlighting the importance of considering multiple dimensions of unfairness in the design of these systems.
+This study investigates fairness in recommendation systems using the MovieLens dataset, applying collaborative filtering strategies: ALS, NCF, and CBF. We assess unfairness across different clustering configurations: Gender, Age, Activity, and Agglomerative. The results indicate significant variations in unfairness among the strategies, with the Agglomerative method standing out for exhibiting the highest levels of group unfairness in most approaches. This analysis suggests the need for careful selection of both filtering strategy and clustering method to promote fairer and more inclusive recommendation systems, highlighting the importance of considering multiple dimensions of unfairness in the design of these systems.
 
 <h1 align="center">
     <img alt="abstract" src="https://github.com/ravarmes/recsys-rgrp-movielens-ieee/blob/main/assets/graphical_abstract.png" />
@@ -48,12 +48,12 @@ This study investigates fairness in recommendation systems using the MovieLens d
 | AlgorithmUserFairness                | Classes to Measure Fairness (Polarization, Individual Fairness, and Group Fairness) of Recommendation Algorithms in Recommendation Systems.                                                                                               |
 | RecSys                               | Factory Class to Instantiate a Recommendation System Based on String Parameters.                                                                                                                                           |
 | RecSysALS                            | Alternating Least Squares (ALS) for Collaborative Filtering is an algorithm that iteratively optimizes two matrices to better predict user ratings on items, based on the idea of matrix factorization.                       |
-| RecSysKNN                            | K-Nearest Neighbors for Recommendation Systems is a method that recommends items or users based on the proximity or similarity between them, utilizing the technique of K nearest neighbors.                                      |
-| RecSysNMF                            | Non-Negative Matrix Factorization for Recommendation Systems decomposes a rating matrix into two non-negative factor matrices, revealing latent patterns that can be used to predict missing ratings. |
+| RecSysCBF | Content-Based Filtering for Recommendation Systems is a method that recommends items based on the similarity between movie genres, utilizing content attributes to match user preferences. |
+| RecSysNCF | Neural Collaborative Filtering for Recommendation Systems leverages neural networks to model complex interactions between users and items, predicting missing ratings through deep learning techniques. |
+| Test_FairnessGroup_MovieLens_Activity         | Test script for the fairness measurement algorithm (AlgorithmUserFairness) considering user grouping by the number of ratings.                                                                                                |
 | Test_FairnessGroup_MovieLens_Age         | Test script for the fairness measurement algorithm (AlgorithmUserFairness) considering user grouping by age.                                                                                                |
 | Test_FairnessGroup_MovieLens_Agglomerative         | Test script for the fairness measurement algorithm (AlgorithmUserFairness) considering agglomerative clustering.                                                                                                |
 | Test_FairnessGroup_MovieLens_Gender         | Test script for the fairness measurement algorithm (AlgorithmUserFairness) considering user grouping by gender.                                                                                                |
-| Test_FairnessGroup_MovieLens_NR         | Test script for the fairness measurement algorithm (AlgorithmUserFairness) considering user grouping by the number of ratings.                                                                                                |
 
 ## 📺 Video Abstract
 
