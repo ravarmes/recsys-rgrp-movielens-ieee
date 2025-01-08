@@ -26,7 +26,7 @@ angles += angles[:1]
 
 fig, axs = plt.subplots(1, 2, figsize=(12, 6), subplot_kw=dict(polar=True))
 
-show_ticks = [0.0010, 0.0025]
+show_ticks = [0.0005, 0.0010]
 
 # Primeiro gráfico de radar
 for i, estrategia in enumerate(dados):

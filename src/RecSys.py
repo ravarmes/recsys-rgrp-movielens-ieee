@@ -1,7 +1,8 @@
 import pandas as pd
 import RecSysALS
-import RecSysNCF
-import RecSysCBF
+import RecSysNMF
+import RecSysKNN
+# import RecSysNCF
 
 class RecSys():
         
@@ -191,20 +192,24 @@ class RecSys():
         if(algorithm == 'RecSysALS'):
             
             # factorization parameters
-            rank = 20 # before 20
-            lambda_ = 20 # before 20 - ridge regularizer parameter
+            rank = 1 # before 20 (5)
+            lambda_ = 1 # before 20 (5) - ridge regularizer parameter
 
             # initiate a recommender system of type ALS (Alternating Least Squares)
             RS = RecSysALS.als_RecSysALS(rank,lambda_)
             X_est, error = RS.fit_model(X)
 
-        elif(algorithm == 'RecSysNCF'):
-            RS = RecSysNCF.RecSysNCF(n_users=1000, n_items=1000, n_factors=20, ratings=X)
-            X_est, error = RS.fit_model()
-
-        elif algorithm == 'RecSysCBF':
-            RS = RecSysCBF.RecSysCBF(k=5, ratings=X, movie_file='Data/MovieLens-1M/movies-1000.txt', regularization=0.1, alpha=1e-6)
+        elif(algorithm == 'RecSysKNN'):
+            RS = RecSysKNN.RecSysKNN(k=5, ratings=X, user_based=True)
             X_est = RS.fit_model()
+
+        elif(algorithm == 'RecSysNMF'):
+            RS = RecSysNMF.RecSysNMF(n_components=5, ratings=X)
+            X_est = RS.fit_model()
+
+        # elif(algorithm == 'RecSysNCF'):
+        #     RS = RecSysNCF.RecSysNCF(n_users=300, n_items=1000, n_factors=20, ratings=X)
+        #     X_est, error = RS.fit_model()
 
         else:
             RecSysALS

@@ -1,21 +1,17 @@
 from RecSys import RecSys
-from UserFairness import Polarization
-from UserFairness import IndividualLossVariance
 from UserFairness import GroupLossVariance
 from UserFairness import RMSE
-import matplotlib.pyplot as plt
-import ILD as ILD
 
 
 # reading data from 3883 movies and 6040 users 
 Data_path = 'Data/MovieLens-1M'
-n_users=  1000
+n_users=  300
 n_items= 1000
 top_users = True # True: to use users with more ratings; False: otherwise
 top_items = True # True: to use movies with more ratings; False: otherwise
 
 # recommendation algorithm
-algorithms = ['RecSysALS', 'RecSysNCF', 'RecSysCBF']
+algorithms = ['RecSysALS', 'RecSysNMF', 'RecSysKNN']
 
 for algorithm in algorithms:
 
@@ -47,8 +43,8 @@ for algorithm in algorithms:
     # advantaged group: 5% users with the highest number of item ratings
     # disadvantaged group: 95% users with the lowest number of item ratings
     list_users = X_est.index.tolist()
-    advantaged_group = list_users[0:50]
-    disadvantaged_group = list_users[50:1000]
+    advantaged_group = list_users[0:15]
+    disadvantaged_group = list_users[15:300]
     G = {1: advantaged_group, 2: disadvantaged_group}
 
     # # Calculando a quantidade de elementos em cada grupo
@@ -66,12 +62,6 @@ for algorithm in algorithms:
     print(f'Group (Rgrp Activity): {RgrpActivity:.7f}')
     print(f'RgrpActivity (advantaged_group)   : {losses_RgrpActivity[1]:.7f}')
     print(f'RgrpActivity (disadvantaged_group): {losses_RgrpActivity[2]:.7f}')
-
-    # Calculando métricas por grupo
-    item_similarity = ILD.compute_item_similarity(X)
-    ild = ILD.compute_metrics_by_group(X, X_est, G, item_similarity, top_k=50)
-    print("ILD")
-    print(ild)
 
     rmse = RMSE(X, omega)
     rmse_result = rmse.evaluate(X_est)

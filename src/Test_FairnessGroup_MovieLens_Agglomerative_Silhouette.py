@@ -14,7 +14,7 @@ from sklearn.metrics import silhouette_score
 
 # reading data from 3883 movies and 6040 users 
 Data_path = 'Data/MovieLens-1M'
-n_users=  1000
+n_users=  300
 n_items= 1000
 top_users = True # True: to use users with more ratings; False: otherwise
 top_items = True # True: to use movies with more ratings; False: otherwise
@@ -67,6 +67,3 @@ plt.ylabel('Silhouette Score')
 plt.title('Silhouette Score para Determinação do Número de Clusters')
 plt.grid(True)
 plt.show()
-
-    
-    
